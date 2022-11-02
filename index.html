@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <style>
+        *{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background-color: hsl(226,43%, 10%);
+    
+    color: #ffffff;
+    transition: ease all .5s;;
+}
+.dashboard{
+    min-height: 100vh;
+    padding: 4rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.dashboard__content{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(300px, 330px));
+    transition: ease all .5s;
+    }
+ .dashboard__item{
+    
+    position: relative;
+    transition: 1s;
+} 
+.dashboard__first {
+    
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: hsl(348,100%, 68%);
+    border-radius: 30px;
+    transition: transform .3s cubic-bezier(.2,.85,.4,1.275);
+}
+.dashboard__second{
+    display: block;
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: hsl(145,58%, 55%);
+    top: 0px;
+    border-radius: 30px;
+    font-size: 40px;
+    text-align: center;
+    line-height: 200px;
+    
+}
+.dashboard__item .dashboard__second{
+     transform:  rotateY(90deg) ; 
+     transition: transform .3s cubic-bezier(.2,.85,.4,1.275);
+}
+.tracking-card {
+    
+    background-color: hsl(235,46%, 20%);
+    height: 50%;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem; 
+    position: relative; 
+    bottom: 1px;
+}
+.tracking-card__title{
+    text-align: center;
+    margin-bottom: 5px;
+}
+.dashboard__item:hover .dashboard__first{
+    transform: rotateY(90deg);
+    transition: transform .3s cubic-bezier(.2,.85,.4,1.275);
+}
+.dashboard__item:hover .dashboard__second{
+    transform: rotateY(0deg);
+    transition: transform .3s cubic-bezier(.2,.85,.4,1.275);
+    
+}
+@media(min-width: 1024px){
+    .dashboard__content{        
+            grid-template-columns:repeat(2, 1fr);
+            gap: 5rem;
+            }
+    .tracking-card__title{
+        text-align: left;
+    }
+    .dashboard__first, .dashboard__second{
+        width: 300px;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="container">
+            <div class="dashboard__content">
+    <div class="dashboard__item">           
+    <div class="dashboard__first">
+           
+        <article class="tracking-card">
+            
+            <div class="tracking-card__body">
+                <div class="tracking-card__title">
+                    Привет
+                </div>
+                <div class="tracking-card__prev-period">
+                    Наведи на меня курсор
+                </div>
+            </div>
+        </article>
+    </div> 
+    <div class="dashboard__second">1</div> 
+    </div>
+    <div class="dashboard__item">
+        <div class="dashboard__first">
+        <article class="tracking-card">
+          
+            <div class="tracking-card__body">
+                <div class="tracking-card__title">
+                    Привет
+                </div>
+                <div class="tracking-card__prev-period">
+                    Наведи на меня курсор
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="dashboard__second">2</div> 
+    </div>
+    <div class="dashboard__item">
+        <div class="dashboard__first">
+        <article class="tracking-card">
+        
+            <div class="tracking-card__body">
+                <div class="tracking-card__title">
+                    Привет
+                </div>
+                <div class="tracking-card__prev-period">
+                    Наведи на меня курсор
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="dashboard__second">3</div> 
+    </div>
+    <div class="dashboard__item">
+        <div class="dashboard__first">
+        <article class="tracking-card">
+           
+            <div class="tracking-card__body">
+                <div class="tracking-card__title">
+                    Привет
+                </div>
+                <div class="tracking-card__prev-period">
+                    Наведи на меня курсор
+                </div>
+            </div>
+        </article>
+    </div>
+    <div class="dashboard__second">4</div> 
+    </div>
+   
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
